@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import ColorContext from './context/ColorContext'
+import BorderContext from './context/BorderContext'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Box from './components/Box'
+export default class App extends Component {
+    render() {
+        return (
+            <ColorContext.Provider value={'#913'}>
+                <BorderContext.Provider value={'2px solid blue'}>
+                    <Box />
+                </BorderContext.Provider>
+            </ColorContext.Provider>
+        )
+    }
 }
-
-export default App;

@@ -1,0 +1,6 @@
+.box{
+    float: left;
+}
+.active{
+    background-color: #ccc;
+}

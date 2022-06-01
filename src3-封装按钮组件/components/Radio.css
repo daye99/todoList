@@ -1,0 +1,26 @@
+.radio-group{
+    width: 300px;
+    margin:  10px auto;
+    display: flex;
+}
+.radio-group .radio {
+    flex: 1;
+    border: 1px solid #555;
+    text-align: center;
+    border-right: none;
+    padding: 6px;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.5s;
+
+}
+.radio-group .radio:last-child {
+    border-right: 1px solid #555;
+}
+.radio-group .radio.active{
+    border: 1px solid #1890ff;
+    color: #1890ff;
+}
+.active+.radio{
+    border-left: none;
+}
